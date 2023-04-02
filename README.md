@@ -1,1 +1,6 @@
-# Template_Matching
+# README
+Here is what I demonstrated on our system doing when I met with the instructor. First, I launch my program and will hold up an object in front of the live web camera on your laptop. Next, I will press a key [c] in order to capture one frame of video, and then I will select the ROI which will become the template for that object. Now repeating this process two more times in order to 'teach' your system about three objects.
+
+Once my system knows three objects, will switch it into recognition mode. In recognition mode it will attempt to find instances of each object in the video feed from your camera. When a known object is found, a rectangle around the object will be displayed and also the name of the object will be displayed on the image. I will then find the best matching instance in each video frame of each object, and if the match score exceeds a threshold, will identify that object in the video by name.
+
+Further details to consider: First, simple run-time constraints, it may not be feasible to seek each object in each frame of video. I will have to experiment and possibly throttle back to only examining every kth video frame. There are six different similarity measures available in the template matching routine. Have experimented with these offline and arrive at a decision about which I thought is best. Already have the best running in my system by the time I presented my system to the instructor.
